@@ -6,12 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from src.schemas import MultipleLuckyBetsResponse
 from src.core import multiple_luckynumbers
 
-origins = [
-    "http://localhost.com",
-    "https://localhost.com",
-    "http://localhost",
-    "http://localhost:8080",
-]
+origins = ["*"]
 
 
 app = FastAPI()
