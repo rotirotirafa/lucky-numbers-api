@@ -7,5 +7,6 @@ class LuckyBets(BaseModel):
     game: int
     numbers: List
 
+
 class MultipleLuckyBetsResponse(BaseModel):
     data: List[LuckyBets]

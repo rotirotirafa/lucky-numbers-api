@@ -1,17 +1,17 @@
 import random
 
 
-def generator(max_lenght):
-    return random.randrange(1, max_lenght)
+def generator(max_length: int) -> int:
+    return random.randrange(1, max_length)
 
 
-def check_six_size(new_lucky_numbers):
+def check_six_size(new_lucky_numbers: list) -> bool:
     if len(new_lucky_numbers) < 6:
         return True
     return False
 
 
-def remove_repeated(lucky_numbers):
+def remove_repeated(lucky_numbers) -> list:
     new_lucky_numbers = []
     
     for number in lucky_numbers:
@@ -24,7 +24,7 @@ def remove_repeated(lucky_numbers):
     return sorted(new_lucky_numbers)
 
 
-def megasena(numbers_quantity: int = 6):
+def megasena(numbers_quantity: int = 6) -> list:
 
     if numbers_quantity > 15:
         numbers_quantity = 15
@@ -36,7 +36,8 @@ def megasena(numbers_quantity: int = 6):
 
     return remove_repeated(lucky_numbers)
 
-def multiple_luckynumbers(bets: int, numbers_quantity: int):
+
+def multiple_lucky_numbers(bets: int, numbers_quantity: int) -> list:
     lucky_numbers = []
     
     for n in range(bets):
